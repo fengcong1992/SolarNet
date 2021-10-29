@@ -20,6 +20,8 @@ module load intel/18.0.2 python3/3.7.0 cuda/10.0 cudnn/7.6.2 impi/18.0.2 git/2.2
 ### Python library
 ```
 tensorflow           1.15.0
+tensorflow-estimator 1.15.1
+tensorflow-gpu       1.15.0
 Keras                2.3.1
 Keras-Applications   1.0.8
 Keras-Preprocessing  1.1.2
