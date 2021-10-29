@@ -19,22 +19,21 @@ module load intel/18.0.2 python3/3.7.0 cuda/10.0 cudnn/7.6.2 impi/18.0.2 git/2.2
 
 ### Python library
 ```
-import pandas as pd
-import os, sys, pickle
-from keras import models
-from keras import layers
-from keras import optimizers
-from keras.callbacks import ModelCheckpoint
-from keras.utils import multi_gpu_model
-import tensorflow as tf
-import subprocess, argparse
+tensorflow           1.15.0
+Keras                2.3.1
+Keras-Applications   1.0.8
+Keras-Preprocessing  1.1.2
+numpy                1.20.3
+pandas               0.24.1
 ```
 
 
 ## Publications
 **If you use this package in your research, please cite our publications**:
 
-Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences, Cong Feng, Jie Zhang, Wenqi Zhang, and Bri-Mathias Hodge. (under review)
+Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2020. Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences. (under review)
+
+Feng, C. and Zhang, J., 2020. SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting. Solar Energy, 204, pp.71-78.
 
 
 **Collaborations are always welcome if more help is needed.**
