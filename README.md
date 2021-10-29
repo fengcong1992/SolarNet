@@ -31,7 +31,7 @@ pandas               0.24.1
 ## Publications
 **If you use this package in your research, please cite our publications**:
 
-Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2020. Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences. (under review)
+Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2021. Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences. (under review)
 
 Feng, C. and Zhang, J., 2020. SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting. Solar Energy, 204, pp.71-78.
 
