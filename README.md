@@ -4,6 +4,7 @@ A repository hosting code for a series of SolarNet papers.
 As described in:
 
 **Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences**, Cong Feng, Jie Zhang, Wenqi Zhang, and Bri-Mathias Hodge. (under review)
+**SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting**, Cong Feng and Jie Zhang. Solar Energy, 204 (2020), pp.71-78
 
 
 ## How to use
