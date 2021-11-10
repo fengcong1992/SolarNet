@@ -1,11 +1,11 @@
 # SolarNet
-A repository hosting code for a series of SolarNet papers.
+A repository hosting code for a series of SolarNet papers, as described in:
 
-As described in:
+**SolarNet2.0: Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences**
 
-**Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences**, Cong Feng, Jie Zhang, Wenqi Zhang, and Bri-Mathias Hodge. (under review)
+**SolarNet1.1: A sky image-based deep convolutional neural network for intra-hour solar forecasting**
 
-**SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting**, Cong Feng and Jie Zhang. Solar Energy, 204 (2020), pp.71-78
+**SolarNet1.0: A sky image-based deep convolutional neural network for intra-hour solar forecasting**
 
 
 ## How to use
