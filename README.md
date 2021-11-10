@@ -39,6 +39,7 @@ Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2021. Convolutional Neural Network
 
 Feng, C. and Zhang, J., 2020. SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting. Solar Energy, 204, pp.71-78.
 
+Feng, C. and Zhang, J., 2020, February. SolarNet: A Deep Convolutional Neural Network for Solar Forecasting via Sky Images. In 2020 IEEE Power & Energy Society Innovative Smart Grid Technologies Conference (ISGT) (pp. 1-5). IEEE.
 
 **Collaborations are always welcome if more help is needed.**
 ## License
