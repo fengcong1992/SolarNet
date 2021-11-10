@@ -33,7 +33,7 @@ pandas               0.24.1
 
 
 ## Publications
-**If you use this package in your research, please cite our publications**:
+**If you use this resource in your research, please cite our publications**:
 
 Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2021. Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences. (under review)
 
