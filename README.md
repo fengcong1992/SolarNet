@@ -12,7 +12,7 @@ As described in:
 Users can implement the SolarNet by running the SolarNet_SolarForecasting.py script. High performance computing resource with GPUs is strongly suggested.
 
 ### Dataset
-The example dataset in this repository contains processed and partitioned training, validation, and testing datasets for 10-min-ahead solar forecasting.
+The example dataset in this repository contains processed and partitioned training, validation, and testing datasets for 10-min-ahead solar forecasting. The data is downloaded from the NREL SRRL dataset.
 
 ### Environment
 ```
