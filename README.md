@@ -9,10 +9,10 @@ A repository hosting code for a series of SolarNet papers, as described in:
 
 
 ## How to use
-Users can implement the SolarNet by running the SolarNet_SolarForecasting.py script. High performance computing resource with GPUs is strongly suggested.
+Users can implement the SolarNet by running the GPU-enabled SolarNet_SolarForecasting.py script. High performance computing resource with GPUs is strongly suggested for implementations with large datasets. An CPU-enabled implementation could be found in ```SolarNet_Implementation_CPU.ipynb```.
 
 ### Dataset
-The example dataset in this repository contains processed and partitioned training, validation, and testing datasets for 10-min-ahead solar forecasting. The data is downloaded from the NREL SRRL dataset.
+The datasets in this repository contains (1) Data_3Dyas.pkl: a file with 3 days of aligned data (1 day of data for each of the training/validation/testing dataset), (2) SkyImage_3Days.zip: 3 days of processed sky images, and (3) Data_6Years.pkl: a file with 6 years of aligned data. Examples in this repository could be replicated with the Data_3Days.pkl and SkyImage_3Days.zip. To implement results with full datasets, sky images and numerical weather measurements should be downloaded and processed first.
 
 ### Environment
 ```
