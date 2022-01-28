@@ -3,9 +3,9 @@ A repository hosting code for a series of SolarNet papers, as described in:
 
 **SolarNet2.0**: Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences
 
-**SolarNet1.1**: A sky image-based deep convolutional neural network for intra-hour solar forecasting
+**SolarNet1.1**: SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting
 
-**SolarNet1.0**: A sky image-based deep convolutional neural network for intra-hour solar forecasting
+**SolarNet1.0**: SolarNet: A Deep Convolutional Neural Network for Solar Forecasting via Sky Images
 
 
 ## How to use
@@ -35,7 +35,7 @@ pandas               0.24.1
 ## Publications
 **If you use this resource in your research, please cite our publications**:
 
-Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2021. Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences. (under review)
+Feng, C., Zhang, J., Zhang, W., Hodge, B.-M., 2022. Convolutional Neural Networks for Intra-hour Solar Forecasting Based on Sky Image Sequences. Applied Energy. 
 
 Feng, C. and Zhang, J., 2020. SolarNet: A sky image-based deep convolutional neural network for intra-hour solar forecasting. Solar Energy, 204, pp.71-78.
 
