@@ -4,17 +4,19 @@ from keras import models
 from keras import layers
 from keras import optimizers
 from keras.callbacks import ModelCheckpoint
-from keras.utils import multi_gpu_model
 import tensorflow as tf
 import subprocess, argparse
 
-from get_model import *
-from get_generators import *
+from Code.get_model import *
+from Code.get_generators import *
 
 n_GPUs = str(subprocess.check_output(["nvidia-smi", "-L"])).count('UUID')
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-sess = tf.Session(config=config)
+
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    for gpu in gpus:
+        tf.config.experimental.set_memory_growth(gpu, True)
+
 tf.keras.backend.clear_session()
 
 def get_args():
@@ -39,11 +41,11 @@ end_train = pd.to_datetime('2014-12-31')
 end_validation = pd.to_datetime('2015-12-31')
 end_test = pd.to_datetime('2017-12-31')
 
-file = open('Data.pkl','rb')
-df_train = pickle.load(file)
-df_validation = pickle.load(file)
-df_test = pickle.load(file)
-file.close()
+file_name = 'Data/Data_3Days.pkl'
+df_train = pd.read_pickle(file_name)
+df_validation = pd.read_pickle(file_name)
+df_test = pd.read_pickle(file_name)
+print(df_train.head())
 
 params1 = {'batch_size': train_batchsize,
            'dim': (img_size, img_size, 3 * no_img),
@@ -76,7 +78,7 @@ model.summary()
 conv_base.summary()
 
 # compile model
-optimizer = optimizers.Adam(lr=0.00001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+optimizer = optimizers.Adam(learning_rate=0.00001, beta_1=0.9, beta_2=0.999, epsilon=None, weight_decay=0.0, amsgrad=False)
 class MyModelCheckPoint(ModelCheckpoint):
     def __init__(self, singlemodel, *args, **kwargs):
         self.singlemodel = singlemodel
@@ -85,12 +87,17 @@ class MyModelCheckPoint(ModelCheckpoint):
     def on_epoch_end(self, epoch, logs=None):
         self.model = self.singlemodel
         super(MyModelCheckPoint, self).on_epoch_end(epoch, logs)
-checkpointer1 = MyModelCheckPoint(model, filepath="BestSingleModel.hdf5", save_best_only=True, verbose=vb)
-# HPC parallel computing
-parallel_model = multi_gpu_model(model, gpus=n_GPUs)
-parallel_model.compile(loss='mean_absolute_error',  # mean_squared_error
-                       optimizer=optimizer,
-                       metrics=['mae'])
+checkpointer1 = MyModelCheckPoint(model, filepath="BestSingleModel.hdf5", save_best_only=True, verbose=1)
+
+
+model.compile(loss='mean_absolute_error', optimizer=optimizer, metrics=['mae'])
+strategy = tf.distribute.MirroredStrategy()
+
+print('n devices: %i' % strategy.num_replicas_in_sync)
+
+with strategy.scope():
+    parallel_model = model
+
 history = parallel_model.fit_generator(train_generator,
                                        steps_per_epoch=int(df_train.shape[0] / train_batchsize),
                                        epochs=60,
