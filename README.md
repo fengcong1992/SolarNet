@@ -14,22 +14,12 @@ Users can implement the SolarNet by running the GPU-enabled ```SolarNet_SolarFor
 ### Dataset
 The datasets in this repository contains (1) ```Data_3Dyas.pkl```: a file with 3 days of aligned data (1 day of data for each of the training/validation/testing dataset), (2) ```SkyImage_3Days.zip```: 3 days of processed sky images, and (3) ```Data_6Years.pkl```: a file with 6 years of aligned data. Examples in this repository could be replicated with the Data_3Days.pkl and SkyImage_3Days.zip. To implement results with full datasets, sky images and numerical weather measurements should be downloaded and processed first.
 
-### Environment
-```
-module load intel/18.0.2 python3/3.7.0 cuda/10.0 cudnn/7.6.2 impi/18.0.2 git/2.24.1 autotools/1.2 cmake/3.16.1 xalt/2.9.6 phdf5/1.10.4 
-```
+### Installation for GPU
+```conda create -n [env-name] -c conda-forge cuda=12.2 tensorflow=2.15.0 python=3.11```
+```conda activate [env-name]```
+```conda install -c conda-forge pandas```
 
-### Python library
-```
-tensorflow           1.15.0
-tensorflow-estimator 1.15.1
-tensorflow-gpu       1.15.0
-Keras                2.3.1
-Keras-Applications   1.0.8
-Keras-Preprocessing  1.1.2
-numpy                1.20.3
-pandas               0.24.1
-```
+Works with CUDA driver 512.147.05. For different CUDA driver, different library versions may be installed.
 
 
 ## Publications
